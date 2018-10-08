@@ -9,30 +9,23 @@ Vagrant is better to download latest version from official site, but it can also
 official site (Debian version):
 
 wget https://releases.hashicorp.com/vagrant/2.1.5/vagrant_2.1.5_x86_64.deb
+
 sudo dpkg -i vagrant_2.1.5_x86_64.deb
 
 Verify if it's installed with following command:
 
 $ vagrant -h
 
-If vagrant installation is succesefull, command will have output like this:
+If vagrant installation is succesefull, command will have partial output like this:
  
 Usage: vagrant [options] <command> [<args>]
 
     -v, --version                    Print the version and exit.
     -h, --help                       Print this help.
 
-Common commands:
-     box             manages boxes: installation, removal, etc.
-     destroy         stops and deletes all traces of the vagrant machine
-     global-status   outputs status Vagrant environments for this user
-     halt            stops the vagrant machine
- ...
 
 
-
-
-2. Download project files from git (Readme, Varantfile and script that was used for task) and add vagrant box:
+2. Download project files from git (Readme, Varantfile and script that was used for task) and add vagrant box then start it:
 
 git clone https://github.com/musi435/atlantbh_vagrant.git
 
