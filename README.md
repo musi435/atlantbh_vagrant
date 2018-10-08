@@ -1,13 +1,13 @@
 # atlantbh_vagrant task1
 
-This is short guide how to install and configure everything for the task. 
+This is short guide how to install and configure everything for the task. Linux Mint was used for it, it should work on both Debian and Ubuntu too.
 
-1. First we need to install virtualbox (if it's not already installed) and vagrant, on my pc virtualbox was already installed from repository.
-You can do that with command :
+1. First we need to install virtualbox if it's not already installed on system and vagrant, that can be done with command:
 sudo apt-get install virtualbox
 
 Vagrant is better to download latest version from official site, but it can also be downloaded from repository. Here is URL from
-official site (Debian version)
+official site (Debian version):
+
 wget https://releases.hashicorp.com/vagrant/2.1.5/vagrant_2.1.5_x86_64.deb
 sudo dpkg -i vagrant_2.1.5_x86_64.deb
 
@@ -29,15 +29,22 @@ Common commands:
      halt            stops the vagrant machine
  ...
 
-2. Create root directory of project and add vagrant box (which is basically virtual OS installation) :
 
-$ mkdir vagrant_atlantbh
-$ cd vagrant_atlantbh
-$ sudo vagrant box add hashicorp/precise64
 
-3. Clone git project which includes Vagrantfile and shell script bootstrap.sh needed for task
+
+2. Download project files from git (Readme, Varantfile and script that was used for task) and add vagrant box:
 
 git clone https://github.com/musi435/atlantbh_vagrant.git
+
+$ cd vagrant_atlantbh
+$ sudo vagrant box add hashicorp/precise64
+$ vagrant up
+
+3. Now to access web server just type http://localhost:8080 and for the task that was asked to show list of users on server, type in browser http://localhost:8080/users
+
+
+
+
 
 
 
